@@ -4,7 +4,7 @@ import UserProfile from './components/UserProfile/UserProfile';
 import Weather from './components/Weather/Weather';
 import TaskList from "./components/TaskList/TaskList";
 import Calculator from './components/Calculator/Calculator';
-import {Authentication} from './components/Gettingin/Authentication';
+import Authentication from './components/Gettingin/Authentication';
 
 
 function App() {

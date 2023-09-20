@@ -1,0 +1,312 @@
+/* Add this CSS for styling new lists */
+*,*::before,*::after{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Board style */
+.board {
+  margin: 2rem auto;
+  padding: 1rem;
+  /* height: 350px; */
+  width: 300px;
+  text-align: center;
+  border: 2px solid rgb(28, 67, 126);
+}
+
+.board h1 {
+  font-size: 24px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.bottomsection{
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  margin-top: 1rem;
+}
+/* Board selector style */
+
+.board-selector button {
+  border: none;
+  color: #1C437E;
+  outline: none;
+  height: 7vh;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 10px;
+  width: 30%;
+}
+
+.board-selector button.active {
+  font-weight: bold;
+}
+
+
+.board-selector {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sinput{
+  border: black 1px solid;
+  color: black;
+
+  width: 100%;
+}
+#container{
+  width: 100%;
+}
+/* ::placeholder{
+  background-color: red;
+  color: yellow;
+} */
+.taskss{
+  display:grid;
+  /* background-color: red; */
+  /* min-height: 90vh; */
+  padding: .5rem;
+  width: 100%;
+  margin-bottom: auto;
+  grid-template-columns: repeat(auto-fill,minmax(300px,4fr));
+}
+.app {
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.app .date {
+  margin: 2rem 0 1rem 0;
+  display: flex;
+}
+.app .date p {
+  padding: 0 2px;
+}
+
+.app .form-input {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.app .form-input .icon {
+  position: absolute;
+  left: 5px;
+  top: 0;
+  font-size: 25px;
+  color: #4b00ff;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app form input {
+  border: 2px solid #000000;
+  color: #000000;
+  padding: 5px 10px 5px 30px;
+  font-size: 1rem;
+  line-height: 30px;
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.app .task-row {
+  border: 2px solid #eee;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 8px 0;
+  /* width: 94%; */
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.board-container{
+  display: grid;
+  background-color: black;
+  /* grid-template-columns: repeat(2, 1fr); */
+  width: 100%;
+}
+
+.task-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+}
+
+.icon {
+  font-size: 25px;
+  color: #1C437E;
+  cursor: pointer;
+}
+
+
+.task-details{
+  width: 100%;
+  padding: .3rem;
+}
+.description {
+  /* text-transform: capitalize; */
+  margin-top: 2px;
+  width: 100%;
+  padding: .4rem;
+  line-height: 20px;
+  /* max-width: 200px; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.description strong{
+  width: 10%;
+  font-size: .9rem;
+}
+.task-icons{
+  /* background-color: #1C437E; */
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #1C437E
+}
+
+
+.description p{
+  font-size: .7rem;
+  overflow: scroll;
+  width:inherit;
+  text-align: left;
+  text-wrap:pretty;
+  font-weight: 600;
+
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.due-date{
+  display: flex;
+  justify-content: start;
+  font-size:.8rem;
+  gap: 4px;
+}
+.completed {
+  background-color: #eee;
+  text-decoration: line-through;
+}
+
+.app .length {
+  margin: 1rem 0;
+}
+
+/* Modal Styles */
+.edit-task-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the modal appears on top of everything else */
+}
+
+.edit-task-modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+  width: 400px;
+  position: relative;
+}
+#taskName{
+  border: 1px solid rgb(28, 67, 126);
+  color: #1C437E;
+  width: 100%;
+  /* float: left; */
+  margin-right:auto;
+}
+
+#dueDate{
+  border: 1px solid #1C437E;
+  color: #1C437E;
+  width: 100%;
+}
+
+
+.edit-task-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.edit-task-modal-header h2 {
+  margin: 0;
+}
+
+.close {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.edit-task-modal-body {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  color: #000000;
+}
+
+.edit-task-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  border: 2px solid #1C437E;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #1C437E;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+/* Blur the background when the modal is open */
+body.modal-open {
+  backdrop-filter: blur(5px); /* Adjust the blur value as needed */
+  background-color: #1C437E;
+  overflow: hidden; /* Prevent scrolling in the background */
+}

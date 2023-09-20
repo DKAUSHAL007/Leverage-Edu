@@ -1,0 +1,110 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c437e;
+}
+
+.container {
+  height: 100vh;
+  min-height: auto;
+  color: white;
+  width: 40%;
+  min-width: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 2.2rem;
+  color: white;
+}
+
+.input_container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  /* width: 100%; */
+  padding: 1.1rem;
+  width: 80%;
+  height: 50%;
+}
+
+.input label {
+  width: 100%;
+}
+
+.input{
+    width:100%;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.275);
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  height: 7vh;
+  width: inherit;
+  background-color: inherit;
+  font-size: 1.1rem;
+  border: white solid 1px;
+  border-radius: 0px;
+  color: rgb(255, 255, 255);
+  outline: none;
+  padding-left: 0.8rem;
+}
+
+.checkbox {
+  width: 100%;
+  font-size: 0.8rem;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  text-transform: uppercase;
+}
+input[type="checkbox"]{
+    height:4vh;
+    cursor: pointer;
+}
+
+.button{
+    font-size:1.2rem;
+    padding: .8rem 1.4rem;
+    color:#1c437e;
+    background-color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 0.3s
+}
+
+.buttoncontainer{
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover{
+    background-color:#1c437e;
+    color: white;
+}
+
+.forgot{
+    margin-left:auto;
+}
